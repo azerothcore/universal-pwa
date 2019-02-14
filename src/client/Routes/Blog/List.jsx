@@ -31,7 +31,7 @@ class Blog extends React.Component {
     
     return (
       <div className="container">
-          {this.state.posts.map(v=><p><Link to={"/blog/"+v.id+"/"}>{v.slug}</Link></p>)}
+          {(this.state.posts.length && this.state.posts.map(v=><p><Link to={"/blog/"+v.id+"/"}>{v.slug}</Link></p>)) || "Loading..."}
       </div>
     );
   }
