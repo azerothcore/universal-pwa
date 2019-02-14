@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
-const ISSUES = '//api.github.com/repos/vmg/redcarpet/issues';
+const ISSUES = '//jsonplaceholder.typicode.com/posts';
 
 class Blog extends React.Component {
 
@@ -29,7 +29,7 @@ class Blog extends React.Component {
     
     return (
       <div className="container">
-          {(this.state.posts.length && this.state.posts.map((v,k)=><p key={k}><Link to={"/blog/"+v.number+"/"}>{v.title}</Link></p>)) || "Loading..."}
+          {(this.state.posts.length && this.state.posts.map((v,k)=><p key={k}><Link to={"/blog/"+v.id+"/"}>{v.title}</Link></p>)) || "Loading..."}
       </div>
     );
   }

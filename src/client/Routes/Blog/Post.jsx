@@ -1,6 +1,6 @@
 import React from "react"
 
-const ISSUE = '//api.github.com/repos/vmg/redcarpet/issues/';
+const ISSUE = '//jsonplaceholder.typicode.com/posts/';
 
 
 class Post extends React.Component {
@@ -30,7 +30,7 @@ class Post extends React.Component {
 
         return (
             <div className="container">
-                <div dangerouslySetInnerHTML={{ __html: this.state.post }}></div>
+                <div>{this.state.post}</div>
             </div>
         );
     }
