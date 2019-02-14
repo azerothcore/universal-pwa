@@ -29,7 +29,7 @@ class Blog extends React.Component {
     
     return (
       <div className="container">
-          {(this.state.posts.length && this.state.posts.map((v,k)=><p key={k}><Link to={"/blog/"+v.id+"/"}>{v.title}</Link></p>)) || "Loading..."}
+          {(this.state.posts.length && this.state.posts.slice(0, 10).map((v,k)=><p key={k}><Link to={"/blog/"+v.id+"/"}>{v.title}</Link></p>)) || "Loading..."}
       </div>
     );
   }
