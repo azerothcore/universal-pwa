@@ -2,6 +2,7 @@
   "name": "hw-universal-pwa",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hw-core.github.io/universal-pwa/",
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
@@ -35,7 +36,9 @@
     "build:ssg": "npm run build && npx react-snap",
     "test": "craco test --config cra-config.js",
     "eject": "react-scripts eject",
-    "prestart": "node ./apps/installer/installer.js"
+    "prestart": "node ./apps/installer/installer.js",
+    "predeploy": "npm run build:ssg",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,6 +61,7 @@
     "bootstrap": "^4.1.3",
     "font-awesome": "^4.7.0",
     "fontawesome": "^4.7.2",
+    "gh-pages": "^2.0.1",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
     "jquery": "^3.3.1",

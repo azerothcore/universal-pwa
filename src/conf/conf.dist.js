@@ -1,6 +1,8 @@
 var config = {
-    websiteUrl: "http://127.0.0.1",
-    apiUrl: typeof window !== "undefined" ? 'http://'+window.location.hostname+':4000' : 'http://127.0.0.1:4000',
+    websiteUrl: typeof window !== "undefined" ? 'http://' + window.location.hostname : 'http://127.0.0.1:3000',
+    sitemapBase: "http://127.0.0.1:3000/universal-pwa/",
+    basePath: "/universal-pwa/" ,
+    apiUrl: typeof window !== "undefined" ? 'http://' + window.location.hostname + ':4000' : 'http://127.0.0.1:4000',
     clientPort: '3000',
     prerender: {
         enabled: false,

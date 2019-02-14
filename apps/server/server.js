@@ -44,14 +44,14 @@ export default (sitemap) => {
     app.use(smExpress(sitemap));
 
     //Serving the files on the dist folder
-    app.use(express.static(DIST_DIR));
+    app.use(config.basePath, express.static(DIST_DIR));
 
     //Send index.html when the user access the web
-    app.get("*", function (req, res) {
+    app.get(config.basePath+"*", function (req, res) {
         res.sendFile(path.join(DIST_DIR, "index.html"));
     });
 
     app.listen(PORT, function () {
-        console.log("Express server Listening on http://127.0.0.1:" + PORT);
+        console.log("Express server Listening on http://127.0.0.1:" + PORT+config.basePath);
     });
 }

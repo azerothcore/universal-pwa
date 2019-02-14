@@ -1,6 +1,6 @@
 import React from "react"
 
-const WP_POST = 'http://azerothshard.org/wp-json/wp/v2/posts/';
+const WP_POST = '//azerothshard.org/wp-json/wp/v2/posts/';
 
 
 class Post extends React.Component {
