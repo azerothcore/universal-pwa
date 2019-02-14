@@ -42,7 +42,7 @@ class App extends React.Component {
     return (
       <Router>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">HW Universal PWA</NavbarBrand>
+          <NavbarBrand href="https://github.com/HW-Core/universal-pwa">HW Universal PWA</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
