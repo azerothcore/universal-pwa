@@ -1,0 +1,7 @@
+{
+  "editor.autoIndent": false,
+  "editor.fontSize": 15,
+  "[yaml]": {
+    "editor.autoIndent": false
+  }
+}

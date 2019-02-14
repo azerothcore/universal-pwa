@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "msjsdiag.debugger-for-chrome",
+        "donjayamanne.githistory",
+        "ms-vsliveshare.vsliveshare",
+        "sibiraj-s.vscode-scss-formatter",
+        "christian-kohler.npm-intellisense"
+    ]
+}

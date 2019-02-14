@@ -1,0 +1,76 @@
+{
+  "name": "hw-universal-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@craco/craco": "^3.4.1",
+    "apollo-upload-client": "^10.0.0",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "fork-ts-checker-webpack-plugin": "^0.5.2",
+    "module-alias": "^2.2.0",
+    "prerender": "^5.5.1",
+    "prerender-memory-cache": "^1.0.2",
+    "prerender-node": "^3.2.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-fade-in": "^0.1.6",
+    "react-router-sitemap": "^1.2.0",
+    "react-scripts": "2.1.3",
+    "react-tinymce": "^0.7.0",
+    "typescript": "^3.3.3"
+  },
+  "scripts": {
+    "serve:screen": "screen -dmS hw-universal-pwa npm serve",
+    "stop:serve:screen": "screen -X -S hw-universal-pwa quit",
+    "start:screen": "screen -dmS hw-universal-pwa npm start",
+    "stop:screen": "screen -X -S hw-universal-pwa quit",
+    "serve": "node ./apps/server/start.js",
+    "start": "craco start --config cra-config.js",
+    "build": "craco build --config cra-config.js && node ./apps/sitemap-gen/index.js",
+    "build:ssg": "npm run build && npx react-snap",
+    "test": "craco test --config cra-config.js",
+    "eject": "react-scripts eject",
+    "prestart": "node ./apps/installer/installer.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "@hw-core/reactstrap-modals": "file:./src/deps/hw-core/reactstrap-modals",
+    "apollo-cache-inmemory": "^1.4.2",
+    "apollo-client": "^2.4.12",
+    "apollo-link-context": "^1.0.12",
+    "apollo-link-http": "^1.5.9",
+    "bootstrap": "^4.1.3",
+    "font-awesome": "^4.7.0",
+    "fontawesome": "^4.7.2",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
+    "proxyquire": "^2.1.0",
+    "react-apollo": "^2.4.0",
+    "react-autobind": "^1.0.6",
+    "react-router-dom": "^4.3.1",
+    "reactstrap": "^6.5.0"
+  },
+  "_moduleAliases": {
+    "@this/src": "src",
+    "@this/conf": "src/conf",
+    "@hw-core": "src/deps/hw-core"
+  }
+}
