@@ -52,7 +52,9 @@ However in most cases you just need to edit following files:
 1. **npm run build** or **npm run build:ssg** (for static generation of routes)
 2. **npm run start:serve** (or deploy everywhere you want if you don't need SSR)
 
-you can use **npm run serve:screen**  to run the process in background with linux screen utility 
+you can use **npm run serve:screen**  to run the process in background with linux screen utility
+
+**NOTE:** to improve SEO enable prerender feature for SSR (Read dedicated paragraph below)
 
 ## Core concepts
 
