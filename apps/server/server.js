@@ -5,7 +5,7 @@ import prerenderNode from "prerender-node";
 import config from "@this/conf/conf";
 import smExpress from "../sitemap-gen/express"
 
-export default (sitemap) => {
+export default async (sitemap) => {
     var DIST_DIR = path.join(__dirname, "../../build"),
         PORT = config.clientPort,
         app = express();
@@ -41,10 +41,10 @@ export default (sitemap) => {
 
     app.use(compression());
 
-    app.use(smExpress(sitemap));
+    app.use(await smExpress(config.basePath, sitemap));
 
     //Serving the files on the dist folder
-    app.use(config.basePath, express.static(DIST_DIR));
+    //app.use(config.basePath, express.static(DIST_DIR));
 
     //Send index.html when the user access the web
     app.get(config.basePath+"*", function (req, res) {

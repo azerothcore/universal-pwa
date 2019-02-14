@@ -10,7 +10,6 @@ class Post extends React.Component {
         this.state = {
             post: ""
         }
-
     }
 
     async componentDidMount() {

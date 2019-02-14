@@ -2,7 +2,7 @@ export default {
     routerFile: '@this/src/client/App/Router', // this file must export routePaths method
     sitemapFile: 'sitemap.xml',
     sitemapBasePath: './build/',
-    injectSitemap: (Sitemap, app = null) => {
+    injectSitemap: async (Sitemap, app = null) => {
         // you can inject your sitemap here in
         // Sitemap.sitemaps array for SSG and if app
         // is defined you should create a new route for SSR
