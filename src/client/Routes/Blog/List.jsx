@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
-const WP_POST = '//azerothshard.org/wp-json/wp/v2/posts/';
+const ISSUES = '//api.github.com/repos/vmg/redcarpet/issues';
 
 class Blog extends React.Component {
 
@@ -13,16 +13,14 @@ class Blog extends React.Component {
  
   }
 
-  componentDidMount (){
+  async componentDidMount (){
 
-    const postsUrl = WP_POST;
+    const postsUrl = ISSUES;
 
-    fetch(postsUrl)
-    .then(response => response.json())
-    .then(response => {
-      this.setState({
-        posts: response
-      })
+    var response = await fetch(postsUrl);
+
+    this.setState({
+      posts: await response.json()
     })
   }
  
@@ -31,7 +29,7 @@ class Blog extends React.Component {
     
     return (
       <div className="container">
-          {(this.state.posts.length && this.state.posts.map(v=><p><Link to={"/blog/"+v.id+"/"}>{v.slug}</Link></p>)) || "Loading..."}
+          {(this.state.posts.length && this.state.posts.map((v,k)=><p key={k}><Link to={"/blog/"+v.number+"/"}>{v.title}</Link></p>)) || "Loading..."}
       </div>
     );
   }

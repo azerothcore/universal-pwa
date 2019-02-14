@@ -1,6 +1,6 @@
 import React from "react"
 
-const WP_POST = '//azerothshard.org/wp-json/wp/v2/posts/';
+const ISSUE = '//api.github.com/repos/vmg/redcarpet/issues/';
 
 
 class Post extends React.Component {
@@ -13,18 +13,16 @@ class Post extends React.Component {
 
     }
 
-    componentDidMount() {
+    async componentDidMount() {
 
-        const postsUrl = WP_POST;
+        const postsUrl = ISSUE;
 
-        fetch(postsUrl + this.props.match.params.id)
-            .then(response => response.json())
-            .then(response => {
-                console.log(response)
-                this.setState({
-                    post: response.content.rendered
-                })
-            })
+        var response = await fetch(postsUrl + this.props.match.params.id);
+        var res = await response.json();
+
+        this.setState({
+            post: res.body
+        })
     }
 
     render() {
