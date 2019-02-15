@@ -49,5 +49,6 @@ if (rootElement.hasChildNodes()) {
 }
 
 
-
-serviceWorker.unregister();
+// switch register to unregister to disable serviceWorker (offline available app)
+// serviceWorker.unregister();
+serviceWorker.register();
