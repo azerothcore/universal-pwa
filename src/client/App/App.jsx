@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHome, faRssSquare, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
+import conf from "@this/conf/conf"
+
 import {
   Collapse,
   Navbar,
@@ -42,7 +44,7 @@ class App extends React.Component {
     return (
       <Router>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">HW Universal PWA</NavbarBrand>
+          <NavbarBrand href={conf.basePath}>HW Universal PWA</NavbarBrand>
           <NavbarToggler onClick={this.toggle} aria-label="navbar-toggler" />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
