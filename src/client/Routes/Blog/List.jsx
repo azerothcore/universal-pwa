@@ -29,6 +29,8 @@ class Blog extends React.Component {
     
     return (
       <div className="container">
+          <h3>This is just a demo of fetching posts with a pre-rendered list (if no JS enabled)</h3>
+          <br></br>
           {(this.state.posts.length && this.state.posts.slice(0, 10).map((v,k)=><p key={k}><Link to={"/blog/"+v.id+"/"}>{v.title}</Link></p>)) || "Loading..."}
       </div>
     );

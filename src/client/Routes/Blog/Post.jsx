@@ -29,6 +29,8 @@ class Post extends React.Component {
 
         return (
             <div className="container" style={{padding:20}}>
+                <h3>This is just a demo of fetching post with a pre-rendered content (if no JS enabled)</h3>
+                <br></br>
                 <div>{this.state.post}</div>
             </div>
         );
