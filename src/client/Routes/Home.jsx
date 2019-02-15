@@ -21,7 +21,7 @@ export default class extends React.Component {
     }
 
     render() {
-        return <div>
+        return <div style={{padding:20}}>
             <ReactMarkdown source={this.state.content} />
         </div>
     }

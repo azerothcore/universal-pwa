@@ -2,13 +2,13 @@
 
 ![image](https://i.imgur.com/mDWWMum.jpg)
 
-This is a boilerplate React project that allow you to start creating an Universal PWA based on a flexible setup of [create-react-app](https://facebook.github.io/create-react-app/) script without any external framework such as Next.js or GatsbyJS.
+This is a boilerplate React project that allows you to start creating an Universal PWA. It is based on a flexible setup of [create-react-app](https://facebook.github.io/create-react-app/) script without any external framework such as Next.js or GatsbyJS.
 
 **An universal PWA is an app that:**
 + can be indexable by web crawler (even those who cannot execute javascript)
-+ can work offline (thankfully the serviceWorker)
++ can work offline (thankfully to the serviceWorker)
 + can work on any devices
-+ can be installed natively and use devices APIs
++ can be installed natively and uses devices APIs
 + can be used for every kind of project: app, static website, hybrid
 
 **Moreover it's preconfigured to have:**

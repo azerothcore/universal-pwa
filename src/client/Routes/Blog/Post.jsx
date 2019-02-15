@@ -28,7 +28,7 @@ class Post extends React.Component {
 
 
         return (
-            <div className="container">
+            <div className="container" style={{padding:20}}>
                 <div>{this.state.post}</div>
             </div>
         );
