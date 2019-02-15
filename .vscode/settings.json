@@ -3,5 +3,6 @@
   "editor.fontSize": 15,
   "[yaml]": {
     "editor.autoIndent": false
-  }
+  },
+  "npm-intellisense.importES6": true
 }
