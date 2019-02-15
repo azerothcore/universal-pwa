@@ -1,5 +1,7 @@
 # HW Universal PWA
 
+![image](https://i.imgur.com/mDWWMum.jpg)
+
 This is a boilerplate React project that allow you to start creating an Universal PWA based on a flexible setup of [create-react-app](https://facebook.github.io/create-react-app/) script without any external framework such as Next.js or GatsbyJS.
 
 **An universal PWA is an app that:**
