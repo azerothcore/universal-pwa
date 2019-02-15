@@ -157,5 +157,6 @@ So you can use paths defined in cra-config.js file:
 
 ## TODO (check our issuetracker for details):
 
-- [ ] Improve generation of static sitemaps
-- [ ] Implement exclude option for SSG routes
+- Improve generation of static sitemaps
+- Implement exclude option for SSG routes
+- Integration with cordova/phonegap and electron
