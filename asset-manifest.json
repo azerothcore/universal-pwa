@@ -1,15 +1,15 @@
 {
   "main.css": "/universal-pwa/static/css/main.e644e35d.chunk.css",
-  "main.js": "/universal-pwa/static/js/main.935516d9.chunk.js",
-  "main.js.map": "/universal-pwa/static/js/main.935516d9.chunk.js.map",
+  "main.js": "/universal-pwa/static/js/main.31d1e5ab.chunk.js",
+  "main.js.map": "/universal-pwa/static/js/main.31d1e5ab.chunk.js.map",
   "static/css/1.49131b3a.chunk.css": "/universal-pwa/static/css/1.49131b3a.chunk.css",
   "static/js/1.d52bbd2a.chunk.js": "/universal-pwa/static/js/1.d52bbd2a.chunk.js",
   "static/js/1.d52bbd2a.chunk.js.map": "/universal-pwa/static/js/1.d52bbd2a.chunk.js.map",
   "runtime~main.js": "/universal-pwa/static/js/runtime~main.d74df484.js",
   "runtime~main.js.map": "/universal-pwa/static/js/runtime~main.d74df484.js.map",
-  "static/css/main.e644e35d.chunk.css.map": "/universal-pwa/static/css/main.e644e35d.chunk.css.map",
   "static/css/1.49131b3a.chunk.css.map": "/universal-pwa/static/css/1.49131b3a.chunk.css.map",
+  "static/css/main.e644e35d.chunk.css.map": "/universal-pwa/static/css/main.e644e35d.chunk.css.map",
   "index.html": "/universal-pwa/index.html",
-  "precache-manifest.cd62f6b8e1fb2afdb3dc152459a859d0.js": "/universal-pwa/precache-manifest.cd62f6b8e1fb2afdb3dc152459a859d0.js",
+  "precache-manifest.e622a445b43aa3871366bde6264b520b.js": "/universal-pwa/precache-manifest.e622a445b43aa3871366bde6264b520b.js",
   "service-worker.js": "/universal-pwa/service-worker.js"
 }
