@@ -101,7 +101,7 @@ More info Here: [React Static](https://medium.com/@tannerlinsley/%EF%B8%8F-intro
 
 ### 3. Universal PWA: CSR + SSG + Server Side Rendering (SSR)
 
-The approach above (CSR+SSG) already allows you to develop an app/website that can be modern and indexable, but it's not yet an Universal PWA. There are a lot of websites that changes their contents very often (a blog) or even in real-time depending on some parameters (search engine). Such apps cannot be totally static generated at build time of course so we need an extra layer to handle the "crowling problem". This is called Static Server Rendering.
+The approach above (CSR+SSG) already allows you to develop an app/website that can be modern and indexable, but it's not yet an Universal PWA. There are a lot of websites that changes their contents very often (a blog) or even in real-time depending on some parameters (search engine). Such apps cannot be totally static generated at build time of course so we need an extra layer to handle the "crowling problem". This is called Server Side Rendering.
 The SSR is the method used by old web apps (often written in PHP or Java Servlets) to serve the entire content to the client directly rendered by the server. This method can be used now as an helper to CSR and SSG serving pre-rendered and not dynamic static page only to some kind of clients (such as Web-Crawlers).
 
 To use SSR you need to install following packages:

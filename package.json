@@ -1,8 +1,10 @@
 {
   "name": "hw-universal-pwa",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "hyperweb2",
   "homepage": "https://hw-core.github.io/universal-pwa/",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
