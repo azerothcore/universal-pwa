@@ -1,5 +1,5 @@
 {
-  "name": "hw-universal-pwa",
+  "name": "@hw-core/universal-pwa",
   "version": "1.0.0",
   "private": true,
   "author": "hyperweb2",
