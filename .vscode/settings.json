@@ -4,5 +4,6 @@
   "[yaml]": {
     "editor.autoIndent": false
   },
-  "npm-intellisense.importES6": true
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.scanDevDependencies": true
 }

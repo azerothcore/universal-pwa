@@ -1,18 +1,38 @@
 import React from "react"
+import autoBind from "react-autobind"
+
+import { AppCtxStore } from "@this/src/client/App/App.context"
+
 export default class extends React.Component {
-    constructor(props) {
-        super(props)
+    static contextType = AppCtxStore;
+
+    constructor(props, context) {
+        super(props, context)
+
         this.state = {
+            i: 0,
             text: "",
-            posts: []
+            posts: this.context.state.posts
         }
 
-        this.onTextChange = this.onTextChange.bind(this);
-        this.postClick = this.postClick.bind(this);
+        console.log("constr")
+
+        autoBind(this);
+        this.nameInput = React.createRef();
     }
 
     onTextChange(e) {
         this.setState({ text: e.target.value })
+    }
+
+    async componentDidMount() {
+        for (let j=0;j<10;j++) {
+            await this.setState({i:this.state.i+1})
+        }
+    }
+
+    componentWillMount() {
+        console.log("test")
     }
 
     postClick() {
@@ -23,18 +43,30 @@ export default class extends React.Component {
                 this.state.text
             ]
         })
+
+        this.context.addPost(this.state.text)
+    }
+
+    setUserName() {
+        this.context.setUserName(this.nameInput.current.value)
     }
 
     render() {
         return <div style={{ padding: 20 }}>
             <h3>This is a demo of admin page NOT indexed in sitemap for SEO</h3>
             <br></br>
-            <div style={{marginBottom:20,marginTop:20}}>
+            <div style={{ marginBottom: 20, marginTop: 20 }}>
+                <input placeholder="User name..." defaultValue={this.context.state.user.name} type="text" ref={this.nameInput}></input>
+                <button onClick={this.setUserName}>SET</button>
+            </div>
+            <div style={{ marginBottom: 20, marginTop: 20 }}>
                 <input value={this.state.text} type="text" onChange={this.onTextChange}></input>
                 <button onClick={this.postClick}>POST</button>
             </div>
             <ul>
-                {this.state.posts.map((v, k) => <li key={k}>{v}</li>)}
+                {this.state.posts.map((v, k) => <li key={k}>{this.context.state.user.name}: {v}</li>)}
+                {this.state.i}
+                {this.state.text}
             </ul>
         </div>
     }
