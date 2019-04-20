@@ -3,6 +3,7 @@
         "target": "ES6",
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
+        "jsx" : "react",
         "paths": {
             "@this/src/*": ["./src/*"],
             "@this/conf/*": ["./src/conf/*"],
