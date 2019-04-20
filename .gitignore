@@ -99,4 +99,7 @@ yarn-error.log*
 # This project
 #
 
-/src/conf/conf.js
+/src/conf/*
+!/src/conf/*.dist.js
+
+package-lock.json
