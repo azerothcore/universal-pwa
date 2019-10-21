@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+  node-client:
+    restart: unless-stopped
+    command: tail -f /dev/null
+    image: node:10
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/service
+      - type: volume
+        source: node_modules
+        target: /usr/src/service/node_modules
+        volume:
+          nocopy: true
+    working_dir: /usr/src/service
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - PORT=443
+      - HTTPS=true
+    networks:
+      - local-shared-net
+    expose:
+      - "80"
+      - "443"
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=local-shared-net
+volumes:
+  node_modules:
+networks:
+  local-shared-net:
+    external: true

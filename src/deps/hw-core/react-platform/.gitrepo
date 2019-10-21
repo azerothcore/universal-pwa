@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://gitlab.com/hw-core/modules/reactstrap-modals
+	branch = master
+	commit = c2fe0e0cb97f03c2a7340833f0b39b4c1c542660
+	parent = 2bb4bae5aff7524273c0654f8076c9a4b80c7027
+	method = merge
+	cmdver = 0.4.0

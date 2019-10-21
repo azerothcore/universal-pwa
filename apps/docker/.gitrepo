@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://gitlab.com/hw-core/docker-utils
+	branch = master
+	commit = dd2d0a120f23c23eed6c62516ff65ed01258d4d2
+	parent = 9ca7cf6f516c341778300df71083ac0a46247015
+	method = merge
+	cmdver = 0.4.0

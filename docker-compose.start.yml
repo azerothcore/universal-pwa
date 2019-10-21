@@ -1,0 +1,5 @@
+version: '3.7'
+services:
+  node-client:
+    command: npm run start
+

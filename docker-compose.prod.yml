@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  node-server:
+    environment:
+      - NODE_ENV=production
+  phpmyadmin:
+    entrypoint: ["echo", "Service phpmyadmin disabled"]
+

@@ -3,12 +3,21 @@
         "target": "ES6",
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
-        "jsx" : "react",
+        "jsx": "react",
         "paths": {
-            "@this/src/*": ["./src/*"],
-            "@this/conf/*": ["./src/conf/*"],
-            "@hw-core/*": ["./src/deps/hw-core/*"],
+            "@this/src/*": [
+                "./src/*"
+            ],
+            "@this/conf/*": [
+                "./src/conf/*"
+            ],
+            "@hw-core/*": [
+                "./src/deps/hw-core/*"
+            ]
         },
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "checkJs": false
     },
     "exclude": [
         "node_modules",

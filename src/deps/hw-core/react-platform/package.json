@@ -1,0 +1,9 @@
+{
+  "name": "@hw-core/react-platform",
+  "version": "1.0.0",
+  "private": true,
+  "peerDependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}

@@ -4,10 +4,6 @@ process.env.NODE_ENV = 'production';
 
 require('module-alias/register');
 
-const Sitemap = require("react-router-sitemap").default
-
-var fs = require('fs');
-
 require("@babel/polyfill")
 
 require('@babel/register')({
@@ -18,6 +14,12 @@ require('@babel/register')({
         'dynamic-import-node'
     ]
 });
+
+const Sitemap = require("react-router-sitemap").default
+
+var fs = require('fs');
+
+
 
 var conf = require("./conf.dist").default;
 
