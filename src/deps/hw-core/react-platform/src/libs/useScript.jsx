@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 let cachedScripts = [];
-export function useScript(src, async = false) {
+export default (src, async = false) => {
     // Keeping track of script loaded and error state
     const [state, setState] = useState({
         loaded: false,
@@ -58,7 +58,7 @@ export function useScript(src, async = false) {
                 };
             }
         },
-        [src] // Only re-run effect if script src changes
+        [src, async] // Only re-run effect if script src changes
     );
 
     return [state.loaded, state.error];
