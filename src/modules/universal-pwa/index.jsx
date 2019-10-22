@@ -10,11 +10,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import UPWANavBar from "./components/UPWANavBar"
 
-sEvtMgr.on(Events.app_header_load, (elements) => {
+sEvtMgr.on(Events.app_load_header, (elements) => {
     elements.push(UPWANavBar)
 })
 
-sEvtMgr.on(Events.app_helmet_load, (helmet) => {
+sEvtMgr.on(Events.app_load_helmet, (helmet) => {
     helmet.push(<title>HW-Universal-PWA</title>,
         <meta name="description" content="HyperWeb Universal Progressive Web App" />,
         <meta name="theme-color" content="#000000" />)
