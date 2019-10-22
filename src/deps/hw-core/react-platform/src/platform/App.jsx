@@ -3,8 +3,6 @@ import Router from "./Router"
 
 import { sEvtMgr, Events } from "@hw-core/react-platform";
 
-import config from "@this/src/conf/dist/conf";
-
 class App extends React.Component {
 
     componentDidMount() {
@@ -23,12 +21,12 @@ class App extends React.Component {
         }
 
         sEvtMgr.emit(Events.app_content_wrapper, addWrapper)
-        sEvtMgr.emit(Events.app_header_load, headerElements);
-        sEvtMgr.emit(Events.app_helmet_load, helmet);
+        sEvtMgr.emit(Events.app_load_header, headerElements);
+        sEvtMgr.emit(Events.app_load_helmet, helmet);
 
         return <AppWrappers><>
             {helmet}
-            <Router conf={config}>
+            <Router conf={this.props.conf}>
                 {headerElements.map((component, index) => {
                     const El = component;
                     return <React.Fragment key={index}>
